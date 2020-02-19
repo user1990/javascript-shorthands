@@ -302,3 +302,39 @@ if(myObj && myObj.firstProp && myObj.firstProp.secondProp && myObj.firstProp.sec
 const data = myObj?.firstProp?.secondProp?.actualData
 ```
 
+## Merge Objects
+```javascript
+const person = { name: 'David', gender: 'Male' };
+const tools = { computer: 'Mac', editor: 'Atom' };
+const attributes = { handsomeness: 'Extreme', hair: 'Brown', eyes: 'Blue' };
+
+const summary = {...person, ...tools, ...attributes};
+/* 
+Object {
+  "computer": "Mac",
+  "editor": "Atom",
+  "eyes": "Blue",
+  "gender": "Male",
+  "hair": "Brown",
+  "handsomeness": "Extreme",
+  "name": "David",
+}
+*/
+```
+
+## Get Query String Parameters
+```javascript
+// Assuming "?post=1234&action=edit"
+const urlParams = new URLSearchParams(window.location.search);
+
+console.log(urlParams.has('post')); // true
+console.log(urlParams.get('action')); // "edit"
+console.log(urlParams.getAll('action')); // ["edit"]
+console.log(urlParams.toString()); // "?post=1234&action=edit"
+console.log(urlParams.append('active', '1')); // "?post=1234&action=edit&active=1"
+```
+
+## Convert array numbers to strings
+```javascript
+const strArr = [1,2,3,4,5].map(String); // ["1","2","3","4","5"]
+```
