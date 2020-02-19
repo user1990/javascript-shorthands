@@ -49,18 +49,9 @@ let b = a  || 'new'
 "myString"[4]
 ```
 
-## if evaluation
+## If evaluation
 ```javascript
 // Longhand
-if (isTrue === true) {
-  processTrue();
-}
-
-if (isTrue !== true) {
-  processFalse();
-}
-
-// Shorthand 1
 if (isTrue) {
   processTrue();
 }
@@ -69,12 +60,12 @@ if (!isTrue) {
   processFalse();
 }
 
-// Shorthand 2
+// Shorthand 
 isTrue && processTrue();
 isTrue || processFalse();
 ```
 
-## for loop
+## For loop
 ```javascript
 // Longhand
 for (let i = 0; i < myArray.length; i++)
