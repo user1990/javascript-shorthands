@@ -149,3 +149,98 @@ if (z == 3) {
 // Shorthand
 (z == 3 ? x : y)();
 ```
+
+## Quick Powers
+```javascript
+// Longhand
+Math.pow(2, 3) // 8
+
+// Shorthand
+2 ** 3; // 8
+```
+
+## Remove Final Digits
+```javascript
+// Longhand
+let str = "1553"; 
+Number(str.substring(0, str.length - 1)); // 155
+
+// Shorthand
+1553 / 10   | 0  // 155
+1553 / 100  | 0  // 15
+1553 / 1000 | 0  // 1
+```
+
+## Destructuring axios request
+```javascript
+// Longhand
+const result = axios.get(`https://ironhack-pokeapi.herokuapp.com/pokemon/${entry.id}`)
+const data = result.data
+
+// Shorthand
+const { data } = await axios.get(...)
+```
+
+## Filter Unique Values
+```javascript
+const array = [1, 1, 2, 3, 5, 5, 1]
+const uniqueArray = [...new Set(array)]; [1, 2, 3, 5] 
+```
+
+## Get the Last Item(s) in an Array
+```javascript
+let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(array.slice(-2)); // [8, 9]
+```
+
+## Format JSON Code
+
+
+## Swap variables with Array Destructuring
+```javascript
+let a = 'world', b = 'hello'
+[a, b] = [b, a]
+console.log(a) // hello
+console.log(b) // world
+```
+
+## Async/Await with Destructuring
+```javascript
+const [user, account] = await Promise.all([
+  fetch('/user'),
+  fetch('/account')
+])
+```
+
+## Find max value from array
+```javascript
+const arr = [123, 321, 32];
+Math.max(...arr) // 321
+```
+
+## Logical operators
+```javascript
+true && true // true
+false && true // false
+true && false // false
+false && false // false
+true || true // true
+true || false // true
+false || true // true
+false || false // false
+```
+
+- && : The first falsy value gets returned, if there is none, the last truthy value is being returned.
+- ||: The first truthy value gets returned, if there is none, the operation will equal to the last falsy value.
+
+```javascript
+0 && {a: 1} // 0
+false && 'a' // false
+'2' && 5 // 5
+[] || false // []
+NaN || null // null
+true || 'a' // true
+```
+
+
+
