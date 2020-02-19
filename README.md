@@ -192,7 +192,7 @@ const data = result.data
 const { data } = await axios.get(...)
 ```
 
-## Filter Unique Values
+## Filter Unique Values or remove duplicates from array
 ```javascript
 const array = [1, 1, 2, 3, 5, 5, 1]
 const uniqueArray = [...new Set(array)]; // [1, 2, 3, 5] 
@@ -284,13 +284,4 @@ if(myObj && myObj.firstProp && myObj.firstProp.secondProp && myObj.firstProp.sec
 // Shorthand
 const data = myObj?.firstProp?.secondProp?.actualData
 ```
-
-## Removing duplicate items from an array
-```javascript
-const removeDuplicateItems = arr => [...new Set(arr)];
-removeDuplicateItems([42, 'foo', 42, 'foo', true, true]); // [42, "foo", true]
-```
-
-
-
 
