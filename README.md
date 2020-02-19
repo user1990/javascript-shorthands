@@ -195,7 +195,7 @@ const { data } = await axios.get(...)
 ## Filter Unique Values
 ```javascript
 const array = [1, 1, 2, 3, 5, 5, 1]
-const uniqueArray = [...new Set(array)]; [1, 2, 3, 5] 
+const uniqueArray = [...new Set(array)]; // [1, 2, 3, 5] 
 ```
 
 ## Get the Last Item(s) in an Array
