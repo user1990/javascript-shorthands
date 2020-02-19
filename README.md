@@ -348,7 +348,7 @@ console.log(`I selected ${three}.`); // "I selected 3."
 ## Some Reduce magic combination
 ```javascript
 const ingredients = ['wine', 'tomato', 'onion', 'mushroom']
-const cook = (ingredient) => {
+const cook = ingredient => {
   return `cooked ${ingredient}`
 }
 const wineReduction = ingredients.reduce((sauce, item, index, array) => {
