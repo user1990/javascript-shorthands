@@ -1,7 +1,7 @@
 Javascript Shorthand Coding Techniques
 =====
 
-> Techniques, tips and tricks for fater JS development
+> Techniques, shorthands, tips and tricks for faster and better readable JS development
 
 ## Add, distract, multiply, divide
 ```javascript
@@ -171,6 +171,17 @@ Number(str.substring(0, str.length - 1)); // 155
 1553 / 1000 | 0  // 1
 ```
 
+## Short-Circuiting
+```javascript
+// Longhand
+if (person) {
+  fetchProfile(person);
+}
+
+// Shorthand
+person && fetchProfile(person);
+```
+
 ## Destructuring axios request
 ```javascript
 // Longhand
@@ -194,7 +205,27 @@ console.log(array.slice(-2)); // [8, 9]
 ```
 
 ## Format JSON Code
+```javascript
+const obj = { 
+  foo: { bar: [11, 22, 33, 44], baz: { bing: true, boom: 'Hello' } } 
+};
 
+JSON.stringify(obj, null, 4); // The third parameter is the number of spaces used to beautify the JSON output. 
+// =>"{
+// =>    "foo": {
+// =>        "bar": [
+// =>            11,
+// =>            22,
+// =>            33,
+// =>            44
+// =>        ],
+// =>        "baz": {
+// =>            "bing": true,
+// =>            "boom": "Hello"
+// =>        }
+// =>    }
+// =>}"
+```
 
 ## Swap variables with Array Destructuring
 ```javascript
@@ -241,6 +272,25 @@ false && 'a' // false
 NaN || null // null
 true || 'a' // true
 ```
+
+## Optional chaining
+```javascript
+// Longhand
+let data
+if(myObj && myObj.firstProp && myObj.firstProp.secondProp && myObj.firstProp.secondProp.actualData) {
+  data = myObj.firstProp.secondProp.actualData
+}
+
+// Shorthand
+const data = myObj?.firstProp?.secondProp?.actualData
+```
+
+## Removing duplicate items from an array
+```javascript
+const removeDuplicateItems = arr => [...new Set(arr)];
+removeDuplicateItems([42, 'foo', 42, 'foo', true, true]); // [42, "foo", true]
+```
+
 
 
 
