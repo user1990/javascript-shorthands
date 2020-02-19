@@ -329,3 +329,18 @@ console.log(urlParams.append('active', '1')); // "?post=1234&action=edit&active=
 ```javascript
 const strArr = [1,2,3,4,5].map(String); // ["1","2","3","4","5"]
 ```
+
+## Array destructuring, rest
+```javascript
+const names = ['Jack', 'Janet', 'John', 'Jessie', 'Jaqueline', 'Jerry', 'Justin', 'Julie', 'Jake'];
+const [first, second, third, ...theRest] = names;
+
+console.log(first); // "Jack"
+console.log(theRest); // ["Jessie", "Jaqueline", "Jerry", "Justin", "Julie", "Jake"]
+```
+
+## Skip values by leaving the slot with a comma when Destructuring 
+```javascript
+const [,, three] = [1, 2, 3, 4, 5, 6, 7];
+console.log(`I selected ${three}.`); // "I selected 3."
+```
