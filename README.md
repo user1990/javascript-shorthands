@@ -344,3 +344,16 @@ console.log(theRest); // ["Jessie", "Jaqueline", "Jerry", "Justin", "Julie", "Ja
 const [,, three] = [1, 2, 3, 4, 5, 6, 7];
 console.log(`I selected ${three}.`); // "I selected 3."
 ```
+
+## Some Reduce magic combination
+```javascript
+const ingredients = ['wine', 'tomato', 'onion', 'mushroom']
+const cook = (ingredient) => {
+  return `cooked ${ingredient}`
+}
+const wineReduction = ingredients.reduce((sauce, item, index, array) => {
+  return (index < array.length - 1) ? sauce += `${cook(item)}, ` : sauce += `${cook(item)}`
+}, '')
+
+// wineReduction = "cooked wine, cooked tomato, cooked onion, cooked mushroom"
+```
