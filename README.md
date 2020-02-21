@@ -358,7 +358,7 @@ const wineReduction = ingredients.reduce((sauce, item, index, array) => {
 // wineReduction = "cooked wine, cooked tomato, cooked onion, cooked mushroom"
 ```
 
-## Some Reduce magic combination
+## Combine filter, map, reduce example
 ```javascript
 // Objective: get the total score of force users only
 const personnel = [
@@ -404,3 +404,55 @@ const totalJediScore = personnel
   .map(jedi => jedi.pilotingScore + jedi.shootingScore)
   .reduce((acc, score) => acc + score, 0);
 ```
+
+## Object.entries/Object.fromEntries turn object to multidimensional array and back into an object
+```javascript
+const students = {
+  amelia: 20,
+  beatrice: 22,
+  cece: 20,
+  deirdre: 19,
+  eloise: 21
+}
+
+const overTwentyOne = Object.entries(students).filter(([name, age]) => age >= 21); // [ [ 'beatrice', 22 ], [ 'eloise', 21 ] ]
+const drinkingAgeStudents = Object.fromEntries(overTwentyOne); // { beatrice: 22, eloise: 21 }
+```
+
+## Array flat to flatten multi-dimensional arrays
+```javascript
+const courseStudents = [
+  [ 'Janet', 'Martha', 'Bob', [ 'Phil', 'Candace' ] ],
+  [ 'Wilson', 'Taylor' ],
+  [ 'Edith', 'Jacob', 'Peter', 'Betty' ]
+]
+
+const flattenByTwoLevel = courseStudents.flat(2) //The depth level specifying how deep a nested array structure should be flattened. Defaults to 1.
+console.log(flattenOneLevel)
+// [
+//   'Janet',
+//   'Martha',
+//   'Bob',
+//   [ 'Phil', 'Candace' ],
+//   'Wilson',
+//   'Taylor',
+//   'Edith',
+//   'Jacob',
+//   'Peter',
+//   'Betty'
+// ]
+
+- For an unknown depth with the intention of fully flattening the array the argument of Infinity can be used.
+const alwaysFlattened = courseStudents.flat(Infinity)
+console.log(alwaysFlattened)
+// [
+//   'Janet',   'Martha',
+//   'Bob',     'Phil',
+//   'Candace', 'Wilson',
+//   'Taylor',  'Edith',
+//   'Jacob',   'Peter',
+//   'Betty'
+// ]
+```
+
+
