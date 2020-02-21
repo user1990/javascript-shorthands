@@ -1,7 +1,8 @@
-Javascript Shorthand Coding Techniques
-=====
+## Javascript Shorthand Coding Techniques  [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-> Techniques, shorthands, new features, tips and tricks for faster and better readable JS development
+**Techniques, shorthands, new features, tips and tricks for faster and better readable JS development**
+
+---
 
 ## Add, distract, multiply, divide
 ```javascript
