@@ -419,7 +419,7 @@ const overTwentyOne = Object.entries(students).filter(([name, age]) => age >= 21
 const drinkingAgeStudents = Object.fromEntries(overTwentyOne); // { beatrice: 22, eloise: 21 }
 ```
 
-## Array flat to flatten multi-dimensional arrays
+## Array.prototype.flat to flatten multi-dimensional arrays
 ```javascript
 const courseStudents = [
   [ 'Janet', 'Martha', 'Bob', [ 'Phil', 'Candace' ] ],
@@ -441,8 +441,9 @@ console.log(flattenOneLevel)
 //   'Peter',
 //   'Betty'
 // ]
-
-- For an unknown depth with the intention of fully flattening the array the argument of Infinity can be used.
+```
+* For an unknown depth with the intention of fully flattening the array the argument of Infinity can be used.
+```javascript
 const alwaysFlattened = courseStudents.flat(Infinity)
 console.log(alwaysFlattened)
 // [
@@ -454,5 +455,20 @@ console.log(alwaysFlattened)
 //   'Betty'
 // ]
 ```
+## Array.prototype.flatMap to insert elements into an array.
+```javascript
+// example 1
+const grades = [78, 62, 80, 64]
+const flatMapped = grades.flatMap(grade => [grade, grade + 7]);
+// [
+//  78, 85, 62, 69,
+//  80, 87, 64, 71
+// ]
+
+// example 2
+const names = ['jane', 'john' ];
+const result = names.flatMap((name, index) => [name, index]); // [ 'jane', 1, 'john', 2 ]
+```
+* Note: flatMap only flattens 1 level deep
 
 
