@@ -1,7 +1,7 @@
 Javascript Shorthand Coding Techniques
 =====
 
-> Techniques, shorthands, tips and tricks for faster and better readable JS development
+> Techniques, shorthands, new features, tips and tricks for faster and better readable JS development
 
 ## Add, distract, multiply, divide
 ```javascript
