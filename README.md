@@ -1,10 +1,10 @@
-## Javascript Shorthand Coding Techniques  [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# Javascript Shorthand Coding Techniques  [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 **Techniques, shorthands, new features, tips and tricks for faster and better readable JS development**
 
 ---
 
-## Add, distract, multiply, divide
+### Add, distract, multiply, divide
 ```javascript
 // Longhand
 i = i + 5;
@@ -19,7 +19,7 @@ k *= 10;
 l /= 2;
 ```
 
-## Logical AND
+### Logical AND
 ```javascript
 // Longhand
 if (a > 10) {
@@ -30,7 +30,7 @@ if (a > 10) {
 a > 10 && doSomething();
 ```
 
-## Logical OR
+### Logical OR
 ```javascript
 // Longhand
 if (a !== null || a !== undefined || a !== '') {
@@ -41,7 +41,7 @@ if (a !== null || a !== undefined || a !== '') {
 let b = a  || 'new'
 ```
 
-## Determine character position
+### Determine character position
 ```javascript
 // Longhand
 "myString".charAt(4)
@@ -50,7 +50,7 @@ let b = a  || 'new'
 "myString"[4]
 ```
 
-## If evaluation
+### If evaluation
 ```javascript
 // Longhand
 if (isTrue) {
@@ -66,7 +66,7 @@ isTrue && processTrue();
 isTrue || processFalse();
 ```
 
-## For loop
+### For loop
 ```javascript
 // Longhand
 for (let i = 0; i < myArray.length; i++)
@@ -75,7 +75,7 @@ for (let i = 0; i < myArray.length; i++)
 for (let i of myArray)
 ```
 
-## Array lookup
+### Array lookup
 ```javascript
 // Longhand
 if (array.indexOf(item) >= -1) {
@@ -89,7 +89,7 @@ if (~array.indexOf(item)) {
 ```
 The ~ operator will return a truthy value for anything but -1.
 
-## Double bitwise NOT
+### Double bitwise NOT
 ```javascript
 // Longhand
 Math.floor(1.8) === 1  //true
@@ -98,7 +98,7 @@ Math.floor(1.8) === 1  //true
 ~~1.8 === 1  //true
 ```
 
-## Coercing a string into a number
+### Coercing a string into a number
 ```javascript
 // Longhand
 const a = parseFloat("1234.56");
@@ -109,7 +109,7 @@ const c = +"1234"; // Number: 1234
 const d = -"1234"; // Number: -1234
 ```
 
-## Coercing a number into a string
+### Coercing a number into a string
 ```javascript
 // Longhand
 const a = 123.45;
@@ -120,7 +120,7 @@ const c = 1234 + '';
 a += '';
 ```
 
-## Coercing a value into a boolean
+### Coercing a value into a boolean
 ```javascript
 // Longhand
 const a = Boolean(expression);
@@ -129,7 +129,7 @@ const a = Boolean(expression);
 const a = !!expression;
 ```
 
-## Call functions
+### Call functions
 ```javascript
 // Longhand
 if (z == 3) {
@@ -142,7 +142,7 @@ if (z == 3) {
 (z == 3 ? x : y)();
 ```
 
-## Decimal Base Exponents
+### Decimal Base Exponents
 ```javascript
 // Longhand
 for (let i = 0; i < 10000; i++) {}
@@ -159,7 +159,7 @@ for (let i = 0; i < 1e7; i++) {}
 1e5 === 100000;
 ```
 
-## Quick Powers
+### Quick Powers
 ```javascript
 // Longhand
 Math.pow(2, 3) // 8
@@ -168,7 +168,7 @@ Math.pow(2, 3) // 8
 2 ** 3; // 8
 ```
 
-## Remove Final Digits
+### Remove Final Digits
 ```javascript
 // Longhand
 let str = "1553"; 
@@ -180,7 +180,7 @@ Number(str.substring(0, str.length - 1)); // 155
 1553 / 1000 | 0  // 1
 ```
 
-## Short-Circuiting
+### Short-Circuiting
 ```javascript
 // Longhand
 if (person) {
@@ -201,19 +201,19 @@ const data = result.data
 const { data } = await axios.get(...)
 ```
 
-## Filter Unique Values or remove duplicates from array
+### Filter Unique Values or remove duplicates from array
 ```javascript
 const array = [1, 1, 2, 3, 5, 5, 1]
 const uniqueArray = [...new Set(array)]; // [1, 2, 3, 5] 
 ```
 
-## Get the Last Item(s) in an Array
+### Get the Last Item(s) in an Array
 ```javascript
 let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(array.slice(-2)); // [8, 9]
 ```
 
-## Format JSON Code
+### Format JSON Code
 ```javascript
 const obj = { 
   foo: { bar: [11, 22, 33, 44], baz: { bing: true, boom: 'Hello' } } 
@@ -236,7 +236,7 @@ JSON.stringify(obj, null, 4); // The third parameter is the number of spaces use
 // =>}"
 ```
 
-## Swap variables with Array Destructuring
+### Swap variables with Array Destructuring
 ```javascript
 let a = 'world', b = 'hello'
 [a, b] = [b, a]
@@ -244,7 +244,7 @@ console.log(a) // hello
 console.log(b) // world
 ```
 
-## Async/Await with Destructuring
+### Async/Await with Destructuring
 ```javascript
 const [user, account] = await Promise.all([
   fetch('/user'),
@@ -252,13 +252,13 @@ const [user, account] = await Promise.all([
 ])
 ```
 
-## Find max value from array
+### Find max value from array
 ```javascript
 const arr = [123, 321, 32];
 Math.max(...arr) // 321
 ```
 
-## Logical operators
+### Logical operators
 ```javascript
 true && true // true
 false && true // false
@@ -282,7 +282,7 @@ NaN || null // null
 true || 'a' // true
 ```
 
-## Optional chaining
+### Optional chaining
 ```javascript
 // Longhand
 let data
@@ -294,7 +294,7 @@ if(myObj && myObj.firstProp && myObj.firstProp.secondProp && myObj.firstProp.sec
 const data = myObj?.firstProp?.secondProp?.actualData
 ```
 
-## Merge Objects
+### Merge Objects
 ```javascript
 const person = { name: 'David', gender: 'Male' };
 const tools = { computer: 'Mac', editor: 'Atom' };
@@ -314,7 +314,7 @@ Object {
 */
 ```
 
-## Get Query String Parameters
+### Get Query String Parameters
 ```javascript
 // Assuming "?post=1234&action=edit"
 const urlParams = new URLSearchParams(window.location.search);
@@ -326,7 +326,7 @@ console.log(urlParams.toString()); // "?post=1234&action=edit"
 console.log(urlParams.append('active', '1')); // "?post=1234&action=edit&active=1"
 ```
 
-## Convert array numbers to strings
+### Convert array numbers to strings
 ```javascript
 const strArr = [1,2,3,4,5].map(String); // ["1","2","3","4","5"]
 ```
@@ -340,13 +340,13 @@ console.log(first); // "Jack"
 console.log(theRest); // ["Jessie", "Jaqueline", "Jerry", "Justin", "Julie", "Jake"]
 ```
 
-## Skip values by leaving the slot with a comma when Destructuring 
+### Skip values by leaving the slot with a comma when Destructuring 
 ```javascript
 const [,, three] = [1, 2, 3, 4, 5, 6, 7];
 console.log(`I selected ${three}.`); // "I selected 3."
 ```
 
-## Some Reduce magic combination
+### Some Reduce magic combination
 ```javascript
 const ingredients = ['wine', 'tomato', 'onion', 'mushroom']
 const cook = ingredient => {
@@ -406,7 +406,7 @@ const totalJediScore = personnel
   .reduce((acc, score) => acc + score, 0);
 ```
 
-## Object.entries/Object.fromEntries turn object to multidimensional array and back into an object
+### Object.entries/Object.fromEntries turn object to multidimensional array and back into an object
 ```javascript
 const students = {
   amelia: 20,
@@ -420,7 +420,7 @@ const overTwentyOne = Object.entries(students).filter(([name, age]) => age >= 21
 const drinkingAgeStudents = Object.fromEntries(overTwentyOne); // { beatrice: 22, eloise: 21 }
 ```
 
-## Array.prototype.flat to flatten multi-dimensional arrays
+### Array.prototype.flat to flatten multi-dimensional arrays
 ```javascript
 const courseStudents = [
   [ 'Janet', 'Martha', 'Bob', [ 'Phil', 'Candace' ] ],
@@ -456,7 +456,7 @@ console.log(alwaysFlattened)
 //   'Betty'
 // ]
 ```
-## Array.prototype.flatMap to insert elements into an array.
+### Array.prototype.flatMap to insert elements into an array.
 ```javascript
 // example 1
 const grades = [78, 62, 80, 64]
@@ -471,5 +471,3 @@ const names = ['jane', 'john' ];
 const result = names.flatMap((name, index) => [name, index]); // [ 'jane', 1, 'john', 2 ]
 ```
 * Note: flatMap only flattens 1 level deep
-
-
